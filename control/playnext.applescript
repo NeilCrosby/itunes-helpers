@@ -1,0 +1,1 @@
+tell application "iTunes" of machine "eppc://macmini-2.local" to play (next track)
