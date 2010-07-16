@@ -6,6 +6,7 @@
 # this page.
 # A bit of a shambles codewise (it's a c&p from the php api examples), but it
 # works and only needs to be run once.
+# You'll need http://www.matto1990.com/projects/phplastfmapi/
 
 require_once('phplastfmapi-0.7.1/lastfmapi/lastfmapi.php');
 
