@@ -1,10 +1,10 @@
 <?php
 require_once('phplastfmapi-0.7.1/lastfmapi/lastfmapi.php');
 
-$playlist = isset($_GET['playlist']) ? $_GET['playlist'] : '';
+set_time_limit(0);
 
 $maxTags = 5;
-$playlist = '';
+$playlist = isset($_GET['playlist']) ? $_GET['playlist'] : '';
 
 $info = pathinfo(__FILE__);
 exec($info['dirname']."/../playlist.sh '$playlist'", $json);
