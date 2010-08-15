@@ -31,7 +31,9 @@ $playlist = isset($_GET['playlist']) ? $_GET['playlist'] : '';
 //$playlist = filter_var($playlist, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW + FILTER_FLAG_STRIP_HIGH)
 
 //exec("osascript -s s /Users/neilcrosby/Sites/playlist/playlist.scpt", $json);
-exec("/Users/neilcrosby/Sites/itunes-helpers/playlist/playlist.sh '$playlist'", $json);
+
+$info = pathinfo(__FILE__);
+exec($info['dirname']."/playlist.sh '$playlist'", $json);
 
 $json = implode($json);
 $json = str_replace('{', '[', $json);
