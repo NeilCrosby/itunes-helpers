@@ -3,7 +3,8 @@ require_once('phplastfmapi-0.7.1/lastfmapi/lastfmapi.php');
 
 $playlist = '5 Star';
 
-exec("/Users/neilcrosby/Sites/playlist/playlist.sh '$playlist'", $json);
+$info = pathinfo(__FILE__);
+exec($info['dirname']."/../playlist.sh '$playlist'", $json);
 
 $json = implode($json);
 $json = str_replace('{', '[', $json);
